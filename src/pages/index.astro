@@ -1,6 +1,6 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
 ---
 
 <Layout title="Welcome to Astro.">
@@ -33,11 +33,16 @@ import Card from '../components/Card.astro';
 				</linearGradient>
 			</defs>
 		</svg>
+		<a href="/">首页</a>
+		<a href="/books/">八烙铁资料库</a>
+		<a href="/about">关于Stray Kids</a>
 		<h1>Welcome to <span class="text-gradient">Astro</span></h1>
-		<h2>P211012555  <span class="text-gradient">李文兰</span></h2>
+		<h2>P211012555 <span class="text-gradient">李文兰</span></h2>
 		<p class="instructions">
-			To get started, open the directory <code>src/pages</code> in your project.<br />
-			<strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
+			To get started, open the directory <code>src/pages</code> in your project.<br
+			/>
+			<strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message
+			above.
 		</p>
 		<ul role="list" class="link-card-grid">
 			<Card
@@ -90,7 +95,7 @@ import Card from '../components/Card.astro';
 		text-align: center;
 		margin-bottom: 1em;
 	}
-	h2{
+	h2 {
 		text-align: center;
 	}
 	.text-gradient {
@@ -103,7 +108,10 @@ import Card from '../components/Card.astro';
 	.instructions {
 		margin-bottom: 2rem;
 		border: 1px solid rgba(var(--accent-light), 25%);
-		background: linear-gradient(rgba(var(--accent-dark), 66%), rgba(var(--accent-dark), 33%));
+		background: linear-gradient(
+			rgba(var(--accent-dark), 66%),
+			rgba(var(--accent-dark), 33%)
+		);
 		padding: 1.5rem;
 		border-radius: 8px;
 	}
