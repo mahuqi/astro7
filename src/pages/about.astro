@@ -1,6 +1,8 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Card from "../components/Card.astro";
+import NavigationBar from "../components/NavigationBar.astro";
+import Footerdiv from "../components/Footer.astro";
 ---
 
 <Layout title="Welcome to Astro.">
@@ -33,16 +35,14 @@ import Card from "../components/Card.astro";
                 </linearGradient>
             </defs>
         </svg>
-        <a href="/">首页</a>
-        <a href="/books/">八烙铁资料库</a>
-        <a href="/note">迷人记录</a>
-        <a href="/about">关于Stray Kids</a>
+        <NavigationBar />
         <h1 class="text-gradient">关于Stray Kids</h1>
         <h2>P211012555 <span class="text-gradient">李文兰</span></h2>
         <p class="instructions">
             本页面收录沙漠狐狸梁精寅、笨笨金毛金昇玟、帕布小貂黄铉辰、啵阿里李龙馥、沃夫铲方灿、阔卡韩知城、李鼻涕李糯、猪兔徐彰彬
         </p>
     </main>
+    <Footerdiv/>
 </Layout>
 
 <style>
