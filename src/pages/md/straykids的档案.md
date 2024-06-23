@@ -1,4 +1,5 @@
-#Stray Kids
+
+##Stray Kids
 
 Stray Kids是韩国JYP Entertainment于2018年3月25日推出的男子演唱组合,以下是关于他们的详细信息：
 

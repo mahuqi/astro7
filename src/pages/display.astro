@@ -1,0 +1,111 @@
+---
+import Base from "../components/Base.astro";
+import Poetrycard from "../components/Poetrycard.astro";
+---
+
+<a href="/">首页</a>
+<a href="/recommend">推荐</a>
+<a href="/display">电影TOP</a>
+<a href="/about">关于我们</a>
+
+<meta charset="UTF-8" />
+<Poetrycard
+    imgsrc="https://ts1.cn.mm.bing.net/th/id/R-C.8b43225fbf077bd47cde1c1ea921745e?rik=SpNqQEiJpr0lvw&riu=http%3a%2f%2fn.sinaimg.cn%2fsinakd20121%2f57%2fw1024h1433%2f20230215%2f0065-5425ffc232a074e149977c76b159f4c5.jpg&ehk=CdZ5fnw5%2bnD7SJR9ONF4gTGeOydhSgUzwAzi49IQbbI%3d&risl=&pid=ImgRaw&r=0"
+    poetry="流浪地球2"
+    poetrytitle="类型: 科幻 / 冒险 / 灾难"
+    author="导演: 郭帆"
+    pubTime="2023年评分最高华语电影"
+/>
+<Poetrycard
+    imgsrc="https://x0.ifengimg.com/ucms/2023_35/4E90ECD5902D7222140B691453F8B54B397B8201_size576_w1600_h2370.jpg"
+    poetry="奥本海默"
+    poetrytitle="类型: 剧情 / 传记 / 历史"
+    author="导演: 克里斯托弗·诺兰"
+    pubTime="2023年评分最高外语电影"
+/>
+<Poetrycard
+    imgsrc="https://www.hdsay.net/Files/2023-04/8c3d5a6d646c48e5ad11012f48cb9dbf.jpg"
+    poetry="俄罗斯方块"
+    poetrytitle="类型: 剧情 / 惊悚 / 传记 / 历史"
+    author="导演: 乔·拜尔德"
+    pubTime="2023年年度冷门佳片"
+/>
+<Poetrycard
+    imgsrc="https://img.3dmgame.com/uploads/images/news/20210406/1617669070_638608.jpg"
+    poetry="银河护卫队3"
+    poetrytitle="类型: 喜剧 / 动作 / 科幻 / 惊悚 / 冒险"
+    author="导演: 詹姆斯·古恩"
+    pubTime="2023年评分最高喜剧片"
+/>
+<Poetrycard
+    imgsrc="https://ts1.cn.mm.bing.net/th/id/R-C.dfc95c47ba4c32b9c39bf8df06d0e8c5?rik=f8bojJbdUHsxpQ&riu=http%3a%2f%2fp2.qhimg.com%2ft01f8fe050f26cd7c2b.jpg%3f2126*2976&ehk=HY8fpybdL0eNkxXJsr61NMIlaPs%2fnzt0hOhrHCwZzxY%3d&risl=&pid=ImgRaw&r=0"
+    poetry="我爱你！"
+    poetrytitle="类型: 剧情 / 爱情 / 家庭"
+    author="导演: 韩延"
+    pubTime="2023年评分最高爱情片"
+/>
+<Poetrycard
+    imgsrc="https://www.dcvfp.xyz/wp-content/uploads/2024/03/p2901994196.webp"
+    poetry="完美的日子"
+    poetrytitle="类型: 剧情"
+    author="导演: 维姆·文德斯"
+    pubTime="2023年评分最高日本电影"
+/>
+<Poetrycard
+    imgsrc="https://www.bjiff.com/shoujiapp/sydt/202304/W020230407479183080366.jpg"
+    poetry="下一个素熙"
+    poetrytitle="类型: 剧情"
+    author="导演: 郑朱莉"
+    pubTime="2023年评分最高韩国电影"
+/>
+<Poetrycard
+    imgsrc="https://image.gcores.com/1695315a-e7de-4915-b32a-62cd9e9782a0.png?x-oss-process=image/resize,limit_1,m_mfit,w_2000/quality,q_90/format,webp/bright,-20"
+    poetry="电锯惊魂10"
+    poetrytitle="类型: 悬疑 / 惊悚 / 恐怖"
+    author="导演: 凯文·格劳特"
+    pubTime="2023年评分最高恐怖片"
+/>
+<Poetrycard
+    imgsrc="https://img.zcool.cn/community/01b0195e017eb2a80120a895a5537a.jpg?x-oss-process=image/auto-orient,1/resize,m_lfit,w_1280,limit_1/sharpen,100"
+    poetry="灌篮高手"
+    poetrytitle="类型: 动画 / 运动"
+    author="导演: 井上雄彦"
+    pubTime="2023年评分最高动画片"
+/>
+<Poetrycard
+    imgsrc="https://www.52doutuwang.com/wp-content/uploads/2023/01/20230102184014_86195.jpg"
+    poetry="迷雾中的孩子"
+    poetrytitle="类型: 纪录片"
+    author="导演: 何黎艳"
+    pubTime="2023年评分最高纪录片"
+/>
+<Poetrycard
+    imgsrc="https://www.hdsay.net/Files/2023-05/e773f5144cc345359bbf1ff1a6c493db.jpg"
+    poetry="漫长的季节"
+    poetrytitle="类型: 剧情 / 家庭 / 犯罪"
+    author="导演: 辛爽"
+    pubTime="2023年评分最高华语剧集"
+/>
+<style>
+    a {
+        color: white;
+        text-decoration: none;
+        margin-right: 3em;
+        font-size:30px
+    }
+    a:hover {
+        text-decoration: underline;
+        background-color: rgb(96, 149, 228);
+    }
+    body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            min-height: 100%;
+            background-image: url('../../public/rr.jpg'); /* 替换为你的图片路径 */
+            background-size: cover; /* 背景图片覆盖整个元素 */
+            background-position: center; /* 背景图片居中显示 */
+            background-repeat: no-repeat; /* 背景图片不重复 */
+            background-attachment: fixed; /* 背景图片固定，不随滚动条滚动 */
+        }
+</style>

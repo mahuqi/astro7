@@ -1,0 +1,100 @@
+---
+import Topnav from "../components/Topnav.astro"
+const { frontmatter, title } = Astro.props
+---
+
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{frontmatter.title}</title>
+    <style>
+        p {
+            text-indent: 2em; /* 首行缩进2em */
+        }
+
+        /* 摘要和标题居中样式 */
+        h1, p {
+            text-align: center; /* h1和p文本居中 */
+        }
+
+        /* 摘要样式，假设摘要在h1下方的一个p标签内 */
+        .abstract {
+            text-align: center; /* 摘要文本居中 */
+        }
+
+        /* 页脚保持文本居中 */
+        
+        footer p {
+            text-align: center;
+        }
+        body {
+            margin: 0;
+            background-image: url('../../public/tt.jpg');
+            background-repeat: no-repeat;
+            background-size: cover; /* 背景图片覆盖整个元素 */
+            background-position: center top;
+            padding: 2em;
+            font-family: sans-serif; /* 默认字体 */
+        }
+        h1, h2 {
+            font-family: "华文新魏", sans-serif; /* 指定备用字体 */
+        }
+        h1 {
+            font-size: 48px;
+            color: #333; /* 文字颜色 */
+        }
+        main {
+            width: 800px;
+            margin: 3em auto;
+            background: #fff; /* 内容区域背景色 */
+            padding: 2em; /* 内容区域内边距 */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 内容区域阴影 */
+            img {
+            display: block;          /* 将图片从内联元素转换为块级元素 */
+            max-width: 100%;         /* 图片最大宽度为100% */
+            height: auto;            /* 高度自适应保持图片比例 */
+            margin-left: auto;       /* 左边距设置为自动 */
+            margin-right: auto;      /* 右边距设置为自动 */
+}
+        }
+
+        
+        footer {
+            text-align: center;
+            padding: 1em;
+            background: #f9f9f9; /* 页脚背景色 */
+            margin-top: 3em;
+        }
+        footer p {
+            margin: 0;
+            color: #666; /* 文字颜色 */
+        }
+        /* 辅助视觉的隐藏样式 */
+        .visually-hidden {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            margin: -1px;
+            padding: 0;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            border: 0;
+        }
+    </style>
+</head>
+<body>
+    <Topnav/>
+    <main>
+        <h1>{frontmatter.title}</h1>
+        <p>{frontmatter.abstract}</p>
+        <slot/>
+    </main>
+    <footer>
+        <hr aria-hidden="true">
+        <p><span>李文兰</span><span>P211012555</span>   <span>孙诗琪</span><span>P211012533</span></p>
+        <p>2021级新闻学3班</p>
+    </footer>
+</body>
+</html>

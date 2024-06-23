@@ -36,37 +36,42 @@ import Footerdiv from "../components/Footer.astro";
 			</defs>
 		</svg>
 		<Dht />
-		<h1>Welcome to <span class="text-gradient">Astro</span></h1>
-		<h2>P211012555 <span class="text-gradient">李文兰</span></h2>
-		
+		<h1>Welcome to <span class="text-gradient">神菜单</span></h1>
+		<h2>GOD'S MENU<span class="text-gradient"></span></h2>
 		<p class="instructions">
-			To get started, open the directory <code>src/pages</code> in your project.<br
-			/>
-			<strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message
-			above.
+			遨游在电影的海洋，体验每个故事的情感共鸣。在这里，每一帧都是艺术，每一部作品都是一次心灵的旅行。
 		</p>
+		<div class="video-container">
+		<iframe src="//player.bilibili.com/player.html?isOutside=true&aid=1955901334&bvid=BV1hy411q7AW&cid=1585065959&p=2" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
+		<iframe src="//player.bilibili.com/player.html?isOutside=true&aid=1105525005&bvid=BV1Gw4m1v7ww&cid=1580947367&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
+		<iframe src="//player.bilibili.com/player.html?isOutside=true&aid=1405031058&bvid=BV14r421L7ai&cid=1561052952&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
+		<iframe src="//player.bilibili.com/player.html?isOutside=true&aid=1004969068&bvid=BV1gx4y1p77H&cid=1555100663&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
+	    </div>
+		
 		<ul role="list" class="link-card-grid">
 			<Card
-				href="https://docs.astro.build/"
-				title="Documentation"
-				body="Learn how Astro works and explore the official API docs."
+				href="https://www.thepaper.cn/newsDetail_forward_12419740"
+				title="电影是如何诞生的？"
+				body="电影从无声、黑白发展到有声、彩色,到现在发展了100多年,成了我们非常熟悉的大众艺术。"
+				
 			/>
 			<Card
-				href="https://astro.build/integrations/"
-				title="Integrations"
-				body="Supercharge your project with new frameworks and libraries."
+				href="https://www.sohu.com/a/287261928_268907"
+				title="好莱坞八大电影公司"
+				body="从群山到标志性的好莱坞大字，每个角落都充满了历史和魅力。好莱坞不仅是一个地方，更是一种体验，是不断追求梦想和达到新高度的灵感。"
 			/>
 			<Card
-				href="https://astro.build/themes/"
-				title="Themes"
-				body="Explore a galaxy of community-built starter themes."
+				href="https://baike.baidu.com/item/%E5%A5%A5%E6%96%AF%E5%8D%A1%E9%87%91%E5%83%8F%E5%A5%96/739020"
+				title="奥斯卡金像奖"
+				body="奥斯卡金像奖是美国一项表彰电影业成就的年度奖项，旨在鼓励优秀电影的创作与发展。"
 			/>
 			<Card
-				href="https://astro.build/chat/"
-				title="Community"
-				body="Come say hi to our amazing Discord community. ❤️"
+				href="https://baike.baidu.com/item/%E6%88%9B%E7%BA%B3%E5%9B%BD%E9%99%85%E7%94%B5%E5%BD%B1%E8%8A%82/187315"
+				title="戛纳国际电影节"
+				body="戛纳国际电影节(英文:Cannes International FilmFestival),亦译作康城国际电影节、坎城国际电影节,创立于1946年。"
 			/>
 		</ul>
+		
 	</main>
 	<Footerdiv/>
 </Layout>
@@ -96,14 +101,16 @@ import Footerdiv from "../components/Footer.astro";
 		line-height: 1;
 		text-align: center;
 		margin-bottom: 1em;
+		color: rgb(143,29,34);
 	}
 	h2 {
 		text-align: center;
+		color:white
 	}
 	.text-gradient {
 		background-image: var(--accent-gradient);
 		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
+		-webkit-text-fill-color: white;
 		background-size: 400%;
 		background-position: 0%;
 	}
@@ -111,8 +118,8 @@ import Footerdiv from "../components/Footer.astro";
 		margin-bottom: 2rem;
 		border: 1px solid rgba(var(--accent-light), 25%);
 		background: linear-gradient(
-			rgba(var(--accent-dark), 66%),
-			rgba(var(--accent-dark), 33%)
+			rgba(#e7627d),
+			rgba(#371732)
 		);
 		padding: 1.5rem;
 		border-radius: 8px;
@@ -126,12 +133,38 @@ import Footerdiv from "../components/Footer.astro";
 		padding: 0.3em 0.4em;
 	}
 	.instructions strong {
-		color: rgb(var(--accent-light));
+		color: white;
 	}
 	.link-card-grid {
 		display: grid;
 		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
 		gap: 2rem;
-		padding: 0;
+		padding: 5;
 	}
+	.video-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px; /* 根据需要调整视频之间的间隙 */
+    padding: 10px; /* 容器内边距 */
+}
+
+.video-iframe {
+    width: 100%;
+    max-width: 560px; /* 根据需要调整最大宽度 */
+    height: 315px; /* 根据视频宽高比调整高度 */
+    margin: auto; /* 水平居中 */
+}
+body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            min-height: 100%;
+            background-image: url('../../public/背景.jpg'); /* 替换为你的图片路径 */
+            background-size: cover; /* 背景图片覆盖整个元素 */
+            background-position: center; /* 背景图片居中显示 */
+            background-repeat: no-repeat; /* 背景图片不重复 */
+            background-attachment: fixed; /* 背景图片固定，不随滚动条滚动 */
+        }
 </style>

@@ -1,0 +1,76 @@
+---
+// posts.astro
+const allPosts = await Astro.glob('./md/*.md');
+---
+
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>文章列表</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f0f0f0; /* 页面背景颜色 */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* 使用视口高度 */
+            margin: -20px; /* 减去可能的边距 */
+        }
+        .container {
+            background: white; /* 容器背景颜色 */
+            border-radius: 8px; /* 圆角边框 */
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* 轻微的阴影 */
+            padding: 20px;
+            width: 90%;
+            max-width: 800px; /* 最大宽度限制 */
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        li {
+            margin-bottom: 10px;
+            padding: 10px;
+            border-bottom: 1px solid #e0e0e0; /* 列表项分隔线 */
+        }
+        li:last-child {
+            border-bottom: none; /* 最后一个列表项不显示分隔线 */
+        }
+        a {
+            text-decoration: none;
+            color: #333;
+            display: block;
+            transition: color 0.3s ease;
+        }
+        a:hover {
+            color: #007bff;
+        }
+        /* 响应式设计 */
+        @media (max-width: 600px) {
+            .container {
+                width: 95%;
+                padding: 15px;
+            }
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <ul>
+            {
+                allPosts.map((post) => (
+                    <li key={post.url}>
+                        <a href={post.url}>{post.frontmatter.title}</a>
+                    </li>
+                ))
+            }
+        </ul>
+    </div>
+</body>
+</html>
+

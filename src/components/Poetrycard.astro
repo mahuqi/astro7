@@ -1,0 +1,62 @@
+---
+// MovieCard.astro
+const { imgsrc, poetry, poetrytitle, author, pubTime } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>电影卡片</title>
+    <style>
+        /* 卡片容器样式 */
+        .card-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px; /* 卡片之间的间隙 */
+            margin: 0 auto; /* 居中显示 */
+        }
+        /* 单独的卡片样式 */
+        .movie-card {
+            border: 2px solid #651212;
+            width: 700px; /* 减去间隙宽度以适应三列布局 */
+            text-align: center;
+            border-radius: 50px;
+            overflow: hidden; /* 确保子元素不会超出边框 */
+            padding: 3em;
+            box-sizing: border-box;
+        }
+        .movie-card img {
+            width: 100%;
+            border-radius: 5px 5px 0 0; /* 仅上部圆角 */
+        }
+        .movie-card h2 {
+            font-size: 50px;
+            font-family: "华文新魏", sans-serif;
+            margin: 0.5em 0;
+        }
+        .movie-card .pubTime {
+            font-size: 30px;
+            color: rgb(54, 51, 51);
+            margin: 0.5em 0;
+        }
+    </style>
+    
+</head>
+<body>
+    <div class="card-container">
+        <!-- 单个电影卡片 -->
+        <div class="movie-card">
+            <img src={imgsrc} alt={poetry}/>
+            <h2>{poetry}</h2>
+            <p>
+                <span class="poetryTitle">{poetrytitle}</span> | 
+                <span class="author">{author}</span>
+            </p>
+            <p class="pubTime">{pubTime}</p>
+        </div>
+        <!-- 这里可以复制 .movie-card 来创建更多的电影卡片，例如使用循环 -->
+    </div>
+</body>
+</html>
